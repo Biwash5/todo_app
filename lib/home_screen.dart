@@ -36,7 +36,12 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: const Text("TODO"),
+        title: Center(
+            child: const Text(
+          "Home Page",
+          style: TextStyle(
+              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),
+        )),
         actions: [
           IconButton(
             onPressed: () {
@@ -49,7 +54,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 }),
               );
             },
-            icon: const Icon(Icons.arrow_forward),
+            icon: const Icon(Icons.add_task),
+            iconSize: 30,
           ),
         ],
       ),
@@ -66,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
-            Text("Devloped By Biwash Dahal"),
+            Center(child: Text("Devloped By Biwash Dahal")),
           ],
         ),
       ),

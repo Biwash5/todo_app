@@ -10,9 +10,16 @@ class AddScreen extends StatelessWidget {
     GlobalKey<FormState> key = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
-        title: const Text("ADD ITEM"),
-      ),
+          backgroundColor: Colors.orange,
+          title: Center(
+            child: const Text(
+              "Add Task",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25),
+            ),
+          )),
       body: Form(
         key: key,
         child: Container(

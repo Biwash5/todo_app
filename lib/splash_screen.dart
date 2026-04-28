@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/home_screen.dart';
 
 class MySplashScreen extends StatelessWidget {
   const MySplashScreen({super.key});
@@ -29,11 +30,11 @@ class MySplashScreen extends StatelessWidget {
             ),
             child: Text(
               'Make your day easier with ToDo',
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
           ),
           SizedBox(
-            height: 15 * heightRatio,
+            height: 5 * heightRatio,
           ),
           const Text(
             'Todo list in one click',
@@ -43,17 +44,22 @@ class MySplashScreen extends StatelessWidget {
             height: 60 * heightRatio,
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()));
+            },
             child: Container(
-                color: const Color(0xFFFAA885),
-                width: 310 * widthRatio,
-                height: 60 * heightRatio,
+                decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 229, 144, 60),
+                    borderRadius: BorderRadius.circular(10)),
+                width: 250 * widthRatio,
+                height: 50 * heightRatio,
                 child: const Center(
                   child: Text(
                     'Get Started',
                     style: TextStyle(
                         color: Colors.white,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.bold,
                         fontSize: 18),
                   ),
                 )),
